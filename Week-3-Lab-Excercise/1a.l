@@ -5,7 +5,7 @@
 
 %%
 [aeiouAEIOU] {printf("Vowel\n");}
-[A-Za-z] {printf("consonants \n");}
+[A-Za-z] {printf("Consonants \n");}
 %%
 int yywrap(void){}
 int main()

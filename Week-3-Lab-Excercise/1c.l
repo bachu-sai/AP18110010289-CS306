@@ -1,19 +1,19 @@
 %{ #include<studio.h>
-int n_lines=0;
+int lc=0,ch=0;
 %}
 
 %%
-\n {++n_lines;}
-
+\n {lc++;}
+.ch++;
 
 %%
 int yywrap(void){}
-int main(int argc[],char *argv[])
+int main()
 {
- yyin=fopen("myfile.txt", "r"); 
+
  yylex();
- printf("\n"); 
- printf("Number of lines in the given file: %d",n_lines);
- printf("\n"); 
+  
+ printf("\nNo of lines: %d",lc);
+ printf("\nNo of characters: %d",ch);
  return 0;
 }
